@@ -1,15 +1,3 @@
-/*
-  RMIT University Vietnam
-  Course: COSC2659 iOS Development
-  Semester: 2022B
-  Assessment: Assignment 2
-  Author: Thai Manh Phi
-  ID: s3878070
-  Created  date: 20/08/2022
-  Last modified: 27/08/2022
-  Acknowledgement:
- 1. https://github.com/DanielMartinezC/memorize-ios/blob/master/Memorize/ViewModifiers/Cardify.swift
-*/
 
 import SwiftUI
 
@@ -40,5 +28,7 @@ struct Cardify: AnimatableModifier {
                 .opacity(rotation < 90 ? 1: 0)
         }
         .rotation3DEffect(Angle.degrees(rotation), axis: (0, 1, 0))
+        .padding(.bottom)
+        // here is an edit
     }
 }

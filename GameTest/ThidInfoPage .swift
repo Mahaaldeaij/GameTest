@@ -17,29 +17,29 @@ struct ThirdInfoPage_: View {
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()
-                HStack {
-                    
-                    Spacer()
-                    Image("RankMounatinEmpty")
-                    // .resizable()
-                        .scaledToFill()
-                    //  .ignoresSafeArea()
-                        .padding(.trailing,-19)
-                        .padding(.bottom, 300)
-                    Image("RankMounatinEmpty")
-                    // .resizable()
-                        .scaledToFill()
-                    //  .ignoresSafeArea()
-                        .padding(.trailing, -20)
-                        .padding(.bottom, 300)
-                    Image("RankMounatinEmpty")
-                    // .resizable()
-                        .scaledToFill()
-                    //  .ignoresSafeArea()
-                        .padding(.trailing, 20)
-                        .padding(.bottom, 300)
-                    
-                }
+//                HStack {
+//                    
+//                    Spacer()
+//                    Image("RankMounatinEmpty")
+//                    // .resizable()
+//                        .scaledToFill()
+//                    //  .ignoresSafeArea()
+//                        .padding(.trailing,-19)
+//                        .padding(.bottom, 300)
+//                    Image("RankMounatinEmpty")
+//                    // .resizable()
+//                        .scaledToFill()
+//                    //  .ignoresSafeArea()
+//                        .padding(.trailing, -20)
+//                        .padding(.bottom, 300)
+//                    Image("RankMounatinEmpty")
+//                    // .resizable()
+//                        .scaledToFill()
+//                    //  .ignoresSafeArea()
+//                        .padding(.trailing, 20)
+//                        .padding(.bottom, 300)
+//                    
+//                }
                 
                 Rectangle()
                     .fill(Color(.white))

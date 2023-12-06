@@ -10,6 +10,7 @@ import SwiftUI
 
 struct Storyline: View {
     @State var presentPopup = false
+    @State private var action: Int? = 0
 
     var body: some View {
         NavigationView{
@@ -29,7 +30,7 @@ struct Storyline: View {
                 Image("Oldman")
                     .resizable()
                     .frame(width: 240, height: 500,alignment: .center)
-                    .position(x:690, y: 290)
+                    .position(x:670, y: 290)
                 
                 VStack{
                     Text("يا عيال النشامى!")
@@ -39,11 +40,11 @@ struct Storyline: View {
                     Text("أنا أبو سعود، الحارس الشجاع اللي ما فلت من يدي شيء عشرين سنة، بس اليوم صار لي غدرة بالمحمية!")
                         .font(.system(size: 16))
                         .multilineTextAlignment(.center)
-                    Text("النمر العربي، في طريق الانقراض وانحاش من المحمية، ولا أدري وين ضاع في هالمتاهة! اركض فيها يومين، وأنا وراه مثل المجنون! ")
+                    Text("النمر العربي، في طريق الانقراض وانحاش من المحمية، ولا أدري وين ضاع صار لي يومين وأنا وراه مثل المجنون! ")
                         .font(.system(size: 16))
                         .multilineTextAlignment(.center)
                         .padding(.bottom)
-                    Text("للي أبيه منك يا النشمي، تعاوني وندوره مع بعض ونلقاه قبل ما يندثر ونخسره!")
+                    Text("اللي أبيه منك يا النشمي، تعاوني وندوره مع بعض ونلقاه قبل ما يندثر ونخسره!")
                         .font(.system(size: 16))
                         .multilineTextAlignment(.center)
                         .bold()
@@ -53,23 +54,8 @@ struct Storyline: View {
                 
         
                 
-    
-                    VStack{
-                        NavigationLink(destination: GamePage()){
-                            ZStack{
-                                Rectangle()
-                                    .foregroundColor(Color(hex:"#2B7D59"))
-                                    .frame(width: 120,height: 50)
-                                    .cornerRadius(10)
-                                Text("ابدأ")
-                                    .font(.system(size: 30))
-                                    .bold()
-                                    .foregroundColor(.white)
-                                    
-                            }
-                    }
-                    
-                }.frame(width: 100, height: 350, alignment: .bottom)
+
+                GameMode(gameMode: 4, tag: 1, action: $action, title: "play")
                 
                 HStack{
                     Button { presentPopup = true } label: {  Image(systemName: "pause.fill")

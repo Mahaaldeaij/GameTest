@@ -16,29 +16,29 @@ struct SecondInfoPage_: View {
                     .scaledToFit()
                     .ignoresSafeArea()
                     .position(x:180,y:230)
-                HStack {
-                    
-                    Spacer()
-                    Image("RankMounatinEmpty")
-                    // .resizable()
-                        .scaledToFill()
-                    //  .ignoresSafeArea()
-                        .padding(.trailing,-19)
-                        .padding(.bottom, 300)
-                    Image("RankMounatinEmpty")
-                    // .resizable()
-                        .scaledToFill()
-                    //  .ignoresSafeArea()
-                        .padding(.trailing, -20)
-                        .padding(.bottom, 300)
-                    Image("RankMounatinEmpty")
-                    // .resizable()
-                        .scaledToFill()
-                    //  .ignoresSafeArea()
-                        .padding(.trailing, 20)
-                        .padding(.bottom, 300)
-                    
-                }
+//                HStack {
+//                    
+//                    Spacer()
+//                    Image("RankMounatinEmpty")
+//                    // .resizable()
+//                        .scaledToFill()
+//                    //  .ignoresSafeArea()
+//                        .padding(.trailing,-19)
+//                        .padding(.bottom, 300)
+//                    Image("RankMounatinEmpty")
+//                    // .resizable()
+//                        .scaledToFill()
+//                    //  .ignoresSafeArea()
+//                        .padding(.trailing, -20)
+//                        .padding(.bottom, 300)
+//                    Image("RankMounatinEmpty")
+//                    // .resizable()
+//                        .scaledToFill()
+//                    //  .ignoresSafeArea()
+//                        .padding(.trailing, 20)
+//                        .padding(.bottom, 300)
+//                    
+//                }
                 Rectangle()
                     .fill(Color(.white))
                     .opacity(0.5)
@@ -70,7 +70,7 @@ struct SecondInfoPage_: View {
                     
                 } .frame(width: 450 , height: 338.58, alignment:.center)
                 
-                NavigationLink(destination: Questions().navigationBarBackButtonHidden(true)) {
+                NavigationLink(destination: p2().navigationBarBackButtonHidden(true)) {
                     Text("")
                         .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height - 100)
                 }

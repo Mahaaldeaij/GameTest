@@ -1,14 +1,4 @@
-/*
-  RMIT University Vietnam
-  Course: COSC2659 iOS Development
-  Semester: 2022B
-  Assessment: Assignment 2
-  Author: Thai Manh Phi
-  ID: s3878070
-  Created  date: 26/08/2022
-  Last modified: 26/08/2022
-  Acknowledgement: N/A
-*/
+
 
 import SwiftUI
 
@@ -26,10 +16,21 @@ struct GameMode: View {
                 playSound(sound: "click", type: "wav")
                 
             } label: {
-                Image("play")
-                    .renderingMode(.original)
-                    .frame(width: 22, height: 22, alignment: .center)
-                    
+                VStack{
+                    ZStack{
+                        Rectangle()
+                            .foregroundColor(Color(hex:"#4C776D"))
+                            .frame(width: 120,height: 50)
+                            .cornerRadius(10)
+                        Text("ابدأ")
+                            .font(.system(size: 30))
+                            .bold()
+                            .foregroundColor(.white)
+                        
+                        
+                        
+                    }
+                }.frame(width: 100, height: 350, alignment: .bottom)
                 
             }
         }

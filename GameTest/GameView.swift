@@ -1,16 +1,4 @@
-/*
-  RMIT University Vietnam
-  Course: COSC2659 iOS Development
-  Semester: 2022B
-  Assessment: Assignment 2
-  Author: Thai Manh Phi
-  ID: s3878070
-  Created  date: 05/08/2022
-  Last modified: 27/08/2022
-  Acknowledgement:
- 1. https://stackoverflow.com/questions/61930915/swiftui-detecting-the-navigationview-back-button-press
- 2. https://github.com/SamuelDo02/swiftuitutorials/edit/main/Flashcard.swift
-*/
+
 
 import SwiftUI
 import AVFoundation
@@ -19,11 +7,14 @@ import AVFoundation
 struct GameView: View {
     //@ObservedObject var userModel: UserVM = UserVM()
     @ObservedObject var memoryGame: GameVM
+
     
     @State var userName = ""
     @State var show = false
     @State var gameMode: Int
     @State var buttonClickCheck: Bool
+    @State var presentPopup = false
+    
     
     init(memoryGame: GameVM = GameVM(randomNumOfPairs: 5), gameMode: Int, userName: String = "", show: Bool = false, buttonClickCheck: Bool = false) {
        /// self.userModel = UserVM()
@@ -36,9 +27,24 @@ struct GameView: View {
 
     var body: some View {
         ZStack {
-            Image("back")
+            Image("LineBackground")
                 .resizable()
                 .ignoresSafeArea()
+            HStack{
+                Button { presentPopup = true } label: {  Image(systemName: "pause.fill")
+                        .font(.system(size: 40))
+                        .foregroundColor(Color(hex:"#4C776D")
+                                         
+                        )
+                }
+            }
+            .frame(width: 10,height: 10,alignment: .center)
+            .position(x: -10, y: 30)
+            .popover(isPresented: $presentPopup) {
+                PauseView()
+                
+            }
+
             VStack {
                 //Information at the top of the screen
               
@@ -56,6 +62,7 @@ struct GameView: View {
             }
             .padding(20)
             .foregroundColor(Color("Card"))
+            
             .navigationBarBackButtonHidden(true)
             .navigationBarTitle(Text(""), displayMode: .inline)
             
@@ -71,7 +78,7 @@ struct GameView: View {
         
         //Play and stop background sound on appear and on dissapear
         .onAppear {
-            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "game")
+            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "Middle East Journey")
         }
         .onDisappear {
             MusicPlayer.shared.stopBackgroundMusic()
@@ -80,9 +87,10 @@ struct GameView: View {
         
     }
     
+    // aspect ratio was 2/3 : lana
     //Game body view here
     var gameBody: some View {
-        Grid(items: memoryGame.cards, aspectRatio: 2/3, content: {
+        Grid(items: memoryGame.cards, aspectRatio: 5/3, content: {
             card in
             !card.isFaceUp && card.isMatched ?  AnyView(rec(game: memoryGame)) : AnyView(checkMatch(card: card, game: memoryGame))
         })
@@ -109,6 +117,7 @@ struct GameView: View {
             }
     }
     
+    
     //Shuffle button here
     var shuffle: some View {
         Button {
@@ -116,13 +125,27 @@ struct GameView: View {
                 memoryGame.shuffle()
             }
         } label: {
-            Text("اخلطها")
-                .foregroundColor(Color("Green"))
-        }
+            ZStack{
+          
+//                    .foregroundColor(Color(hex:"#4C776D"))
+//                    .frame(width: 120,height: 50)
+//                    .cornerRadius(10)
+                  
+         Image(systemName: "shuffle.circle.fill")
+                   // .foregroundColor(Color(hex: "#4C776D"))
+                    .padding(.bottom,40)
+               //     .background(.black)
+                    .font(.system(size: 40))
+                    .bold()
+                    .foregroundColor(Color(hex:"#4C776D"))
+                
+                
+                
+                
+            }}
      
         
     }
-    
     //Restart button here and reset user score
     var restart: some View {
         Button {
@@ -131,8 +154,11 @@ struct GameView: View {
               
             }
         }  label: {
-            Text("عدها")
-                .foregroundColor(Color("Green"))
+            Image(systemName: "arrow.clockwise.circle.fill")
+                .foregroundColor(Color(hex: "#4C776D"))
+                .font(.system(size: 40))
+                .padding(.bottom,40)
+                .bold()
         }
         
       
@@ -161,3 +187,5 @@ struct BackButtonView: View {
         )
     }
 }
+
+

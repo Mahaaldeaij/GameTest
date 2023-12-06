@@ -1,9 +1,3 @@
-//
-//  GamePage.swift
-//  Dadan
-//
-//  Created by Maha on 16/05/1445 AH.
-//
 
 import SwiftUI
 

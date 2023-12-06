@@ -20,29 +20,29 @@ struct InfoPage_: View {
                     .scaledToFill()
                     .ignoresSafeArea()
                 
-                HStack {
-                    
-                    Spacer()
-                    Image("RankMounatinEmpty")
-                    // .resizable()
-                        .scaledToFill()
-                    //  .ignoresSafeArea()
-                        .padding(.trailing,-19)
-                        .padding(.bottom, 300)
-                    Image("RankMounatinEmpty")
-                    // .resizable()
-                        .scaledToFill()
-                    //  .ignoresSafeArea()
-                        .padding(.trailing, -20)
-                        .padding(.bottom, 300)
-                    Image("RankMounatinEmpty")
-                    // .resizable()
-                        .scaledToFill()
-                    //  .ignoresSafeArea()
-                        .padding(.trailing, 20)
-                        .padding(.bottom, 300)
-                    
-                }
+//                HStack {
+//                    
+//                    Spacer()
+//                    Image("RankMounatinEmpty")
+//                    // .resizable()
+//                        .scaledToFill()
+//                    //  .ignoresSafeArea()
+//                        .padding(.trailing,-19)
+//                        .padding(.bottom, 300)
+//                    Image("RankMounatinEmpty")
+//                    // .resizable()
+//                        .scaledToFill()
+//                    //  .ignoresSafeArea()
+//                        .padding(.trailing, -20)
+//                        .padding(.bottom, 300)
+//                    Image("RankMounatinEmpty")
+//                    // .resizable()
+//                        .scaledToFill()
+//                    //  .ignoresSafeArea()
+//                        .padding(.trailing, 20)
+//                        .padding(.bottom, 300)
+//                    
+//                }
                 
                 Rectangle()
                     .fill(Color(.white))
@@ -75,7 +75,7 @@ struct InfoPage_: View {
                     
                     
                 } .frame(width: 450 , height: 338.58, alignment:.center)
-                NavigationLink(destination: GamePage2().navigationBarBackButtonHidden(true)) {
+                NavigationLink(destination: Line().navigationBarBackButtonHidden(true)) {
                     Text("")
                         .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height - 100)
                 }

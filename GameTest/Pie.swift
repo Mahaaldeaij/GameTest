@@ -1,10 +1,4 @@
-//
-//  Pie.swift
-//  iMemory
-//
-//  Created by Phi Thai on 20/08/2022.
-//https://www.simpleswiftguide.com/how-to-build-a-circular-progress-bar-in-swiftui/
-//https://github.com/Asperi-Demo/4SwiftUI/blob/master/PlayOn_iOS/PlayOn_iOS/Findings/TestPieProgress.swift
+
 
 import Foundation
 import SwiftUI

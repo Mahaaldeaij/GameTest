@@ -13,7 +13,7 @@ struct GameTestApp: App {
 
     var body: some Scene {
         WindowGroup {
-           HomeView()
+          Logo_View()
            //     .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

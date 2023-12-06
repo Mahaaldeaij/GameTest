@@ -81,6 +81,7 @@ struct Logo_View: View {
                                      .font(.system(size: 40)
                                          .bold())
                                      .padding(40)
+                                     .foregroundColor(.white)
                              }
                          }
 

@@ -1,9 +1,4 @@
-//
-//  GameOverLost.swift
-//  Dadan
-//
-//  Created by lana alfaadhel on 18/05/1445 AH.
-//
+
 
 import SwiftUI
 
